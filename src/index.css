@@ -209,6 +209,20 @@
     opacity: 0.75;
     animation: hero-blur-pulse 3.6s ease-in-out alternate infinite;
   }
+
+  .hero-glow-ring--tight::before,
+  .hero-glow-ring--tight::after {
+    --size: 10px;
+  }
+
+  .hero-glow-ring--tight::after {
+    --size: 2px;
+  }
+
+  .hero-glow-ring--tight::before {
+    --size: 14px;
+    filter: blur(16px);
+  }
 }
 
 @keyframes hero-blur-pulse {

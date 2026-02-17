@@ -6,7 +6,7 @@ const techs = [
   { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", description: "Frontend" },
   { name: "Vite", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg", description: "Tooling" },
   { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", description: "Styling" },
-  { name: "Pinia", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pinia/pinia-original.svg", description: "State" },
+  { name: "Pinia", icon: "https://raw.githubusercontent.com/vuejs/pinia/v2/packages/docs/public/logo.svg", description: "State" },
   { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", description: "Language" },
   { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", description: "Backend" },
   { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", description: "Backend" },
@@ -27,7 +27,7 @@ const techs = [
   { name: "Vercel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg", description: "Deploy" },
   { name: "Railway", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/railway/railway-original.svg", description: "Deploy" },
   { name: "JWT / OAuth", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oauth/oauth-original.svg", description: "Auth" },
-  { name: "Cloudinary", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudinary/cloudinary-original.svg", description: "Storage" },
+  { name: "Cloudinary", icon: "https://unpkg.com/simple-icons@v11/icons/cloudinary.svg", description: "Storage" },
   { name: "SMTP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg", description: "Email" },
 ];
 
@@ -68,7 +68,17 @@ const TechStackSection = () => {
               variants={item}
               className="group relative flex flex-col items-center gap-3 p-5 rounded-xl border border-border bg-card hover:glow-border transition-all duration-300"
             >
-              <img src={tech.icon} alt={tech.name} className="w-10 h-10 group-hover:scale-110 transition-transform duration-300" />
+              <img
+                src={tech.icon}
+                alt={tech.name}
+                loading="lazy"
+                onError={(e) => {
+                  const img = e.currentTarget;
+                  img.onerror = null;
+                  img.src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg";
+                }}
+                className="w-10 h-10 group-hover:scale-110 transition-transform duration-300"
+              />
               <div className="text-center">
                 <h3 className="font-semibold text-foreground text-sm">{tech.name}</h3>
                 <p className="text-xs text-muted-foreground mt-1">{tech.description}</p>

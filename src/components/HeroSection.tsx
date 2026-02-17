@@ -90,7 +90,7 @@ const HeroSection = () => {
                 transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut" }}
                 className="relative mx-auto"
               >
-                <div className="hero-glow-ring p-8 sm:p-10">
+                <div className="hero-glow-ring hero-glow-ring--tight p-3 sm:p-4 ring-1 ring-border/40">
                   <div className="relative flex flex-col items-center">
                     <img
                       src={logoBrand}
