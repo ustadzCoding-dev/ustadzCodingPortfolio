@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Shield, ChevronDown } from "lucide-react";
 import { WavyBackground } from "./ui/wavy-background";
-import logoBrand from "@/assets/logo-brand.png";
 
 const HeroSection = () => {
   return (
@@ -23,8 +22,8 @@ const HeroSection = () => {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
-        <div className="grid items-center gap-10 lg:gap-14 md:grid-cols-2">
-          <div className="text-center md:text-left">
+        <div className="flex justify-center">
+          <div className="text-center max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -61,7 +60,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.45 }}
-              className="flex flex-wrap gap-4 justify-center md:justify-start"
+              className="flex flex-wrap gap-4 justify-center"
             >
               <a
                 href="#projects"
@@ -77,31 +76,6 @@ const HeroSection = () => {
               </a>
             </motion.div>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.94 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.1, ease: "easeOut" }}
-            className="flex justify-center md:justify-end"
-          >
-            <div className="relative w-full max-w-[360px] sm:max-w-[420px]">
-              <motion.div
-                animate={{ y: [0, -10, 0], scale: [1, 1.015, 1] }}
-                transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut" }}
-                className="relative mx-auto"
-              >
-                <div className="hero-glow-ring hero-glow-ring--tight p-3 sm:p-4 ring-1 ring-border/40">
-                  <div className="relative flex flex-col items-center">
-                    <img
-                      src={logoBrand}
-                      alt="Ustadz Coding-Dev"
-                      className="w-56 h-56 sm:w-64 sm:h-64 rounded-full ring-1 ring-border/70 bg-background/30 backdrop-blur"
-                    />
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
         </div>
       </div>
 
