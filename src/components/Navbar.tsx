@@ -48,9 +48,9 @@ const Navbar = () => {
   }, [sectionIds]);
 
   return (
-    <nav className="fixed top-4 left-0 right-0 z-50">
+    <nav className="fixed top-4 left-0 right-0 z-[100]">
       <div className="max-w-5xl mx-auto px-4">
-        <div className="rounded-full border border-border/70 bg-background/85 backdrop-blur-xl shadow-sm supports-[backdrop-filter]:bg-background/70">
+        <div className="rounded-full border border-border/80 bg-background/95 backdrop-blur-xl shadow-md ring-1 ring-border/30 supports-[backdrop-filter]:bg-background/85">
           <div className="px-6 h-14 flex items-center justify-between">
             <a href="#" className="group flex items-center">
               <span className="font-bold text-lg tracking-tight text-foreground leading-none">
